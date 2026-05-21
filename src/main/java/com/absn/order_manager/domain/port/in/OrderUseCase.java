@@ -1,15 +1,13 @@
-package com.absn.order_manager.model.port.in;
+package com.absn.order_manager.domain.port.in;
 
-import com.absn.order_manager.model.Order;
-import com.absn.order_manager.model.OrderStatus;
+import com.absn.order_manager.domain.Order;
+import com.absn.order_manager.domain.OrderStatus;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 public interface OrderUseCase {
-    BigDecimal calculateTotal(Order order);
 
     List<Order> getOrdersByCustomer(Long customerId);
 

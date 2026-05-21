@@ -1,7 +1,7 @@
 package com.absn.order_manager.adapter.out.persistence;
 
-import com.absn.order_manager.model.Item;
-import com.absn.order_manager.model.port.out.ItemRepository;
+import com.absn.order_manager.domain.Item;
+import com.absn.order_manager.domain.port.out.ItemRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

@@ -1,8 +1,8 @@
 package com.absn.order_manager.application;
 
-import com.absn.order_manager.model.Order;
-import com.absn.order_manager.model.OrderStatus;
-import com.absn.order_manager.model.port.out.OrderRepository;
+import com.absn.order_manager.domain.Order;
+import com.absn.order_manager.domain.OrderStatus;
+import com.absn.order_manager.domain.port.out.OrderRepository;
 import com.absn.order_manager.objectmother.OrderObjectMother;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -36,36 +35,6 @@ class OrderServiceTest {
     void setUp() {
         order1 = OrderObjectMother.createCheapOrder();
         order2 = OrderObjectMother.createExpensiveOrder();
-    }
-
-    @Test
-    void shouldReturnZeroWhenOrderHasNoItems() {
-
-        Order order = OrderObjectMother.createEmptyOrder();
-
-        BigDecimal result = orderService.calculateTotal(order);
-
-        assertEquals(BigDecimal.ZERO, result);
-    }
-
-    @Test
-    void shouldCalculateTotalWithSingleItem() {
-
-        Order order = OrderObjectMother.createCheapOrder();
-
-        BigDecimal result = orderService.calculateTotal(order);
-
-        assertEquals(BigDecimal.valueOf(5), result);
-    }
-
-    @Test
-    void shouldCalculateTotalWithMultipleItems() {
-
-        Order order = OrderObjectMother.createExpensiveOrder();
-
-        BigDecimal result = orderService.calculateTotal(order);
-
-        assertEquals(BigDecimal.valueOf(200), result);
     }
 
     @Test

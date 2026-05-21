@@ -1,9 +1,9 @@
 package com.absn.order_manager.objectmother;
 
-import com.absn.order_manager.model.Item;
-import com.absn.order_manager.model.Order;
-import com.absn.order_manager.model.OrderItem;
-import com.absn.order_manager.model.OrderStatus;
+import com.absn.order_manager.domain.Item;
+import com.absn.order_manager.domain.Order;
+import com.absn.order_manager.domain.OrderItem;
+import com.absn.order_manager.domain.OrderStatus;
 
 import java.math.BigDecimal;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.absn.order_manager.adapter.in.web;
 
-import com.absn.order_manager.model.Order;
-import com.absn.order_manager.model.port.in.OrderUseCase;
+import com.absn.order_manager.domain.Order;
+import com.absn.order_manager.domain.port.in.OrderUseCase;
 import com.absn.order_manager.objectmother.OrderObjectMother;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

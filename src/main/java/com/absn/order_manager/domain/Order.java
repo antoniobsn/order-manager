@@ -1,5 +1,6 @@
-package com.absn.order_manager.model;
+package com.absn.order_manager.domain;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Order {
@@ -12,6 +13,14 @@ public class Order {
         this.customerId = customerId;
         this.orderItems = orderItems;
         this.orderStatus = orderStatus;
+    }
+
+    public BigDecimal calculateTotal() {
+
+        return orderItems.stream()
+                .map(item -> item.getUnitPrice()
+                        .multiply(BigDecimal.valueOf(item.getQuantity())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
     public Long getId() {

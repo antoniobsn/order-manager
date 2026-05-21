@@ -1,6 +1,6 @@
-package com.absn.order_manager.model.port.out;
+package com.absn.order_manager.domain.port.out;
 
-import com.absn.order_manager.model.Order;
+import com.absn.order_manager.domain.Order;
 
 import java.util.List;
 

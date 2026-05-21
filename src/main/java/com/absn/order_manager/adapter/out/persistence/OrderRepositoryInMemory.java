@@ -1,9 +1,9 @@
 package com.absn.order_manager.adapter.out.persistence;
 
-import com.absn.order_manager.model.Order;
-import com.absn.order_manager.model.OrderItem;
-import com.absn.order_manager.model.OrderStatus;
-import com.absn.order_manager.model.port.out.OrderRepository;
+import com.absn.order_manager.domain.Order;
+import com.absn.order_manager.domain.OrderItem;
+import com.absn.order_manager.domain.OrderStatus;
+import com.absn.order_manager.domain.port.out.OrderRepository;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;

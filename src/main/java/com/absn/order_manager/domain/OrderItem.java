@@ -1,4 +1,4 @@
-package com.absn.order_manager.model;
+package com.absn.order_manager.domain;
 
 import java.math.BigDecimal;
 
